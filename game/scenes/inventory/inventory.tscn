@@ -1,0 +1,249 @@
+[gd_scene load_steps=10 format=3 uid="uid://ceohccymx3112"]
+
+[ext_resource type="Script" path="res://scripts/inventory.gd" id="1_1py41"]
+[ext_resource type="Texture2D" uid="uid://b5r3e4qjks1cv" path="res://assets/Custom Assets/InventorySlot.png" id="2_sgsbe"]
+[ext_resource type="Texture2D" uid="uid://djgv8s8ijje8d" path="res://assets/Custom Assets/InventoryBackgroundWithHotbar.png" id="2_y20ff"]
+[ext_resource type="Script" path="res://scripts/InventorySlot.gd" id="3_2038i"]
+[ext_resource type="Texture2D" uid="uid://b38bluuxxwjen" path="res://assets/Custom Assets/Crafting_Button.png" id="5_skfjh"]
+[ext_resource type="Texture2D" uid="uid://c402nl5ha3ck8" path="res://assets/Custom Assets/Crafting_Button_Hover.png" id="6_q6kxw"]
+[ext_resource type="Texture2D" uid="uid://bmf8onmno0jna" path="res://assets/Custom Assets/Crafting_Button_Pressed.png" id="6_ry1wu"]
+[ext_resource type="PackedScene" uid="uid://cbtfb3djf54qe" path="res://scenes/CraftingMenu.tscn" id="8_cl2i6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bmqga"]
+texture = ExtResource("2_sgsbe")
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_1py41")
+
+[node name="InventoryMenu" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = -216.0
+offset_right = -144.0
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+texture = ExtResource("2_y20ff")
+
+[node name="GridContainerHotbar" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.0
+offset_top = -140.0
+offset_right = 232.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 6
+
+[node name="Panel1" type="Panel" parent="GridContainerHotbar"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel2" type="Panel" parent="GridContainerHotbar"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel3" type="Panel" parent="GridContainerHotbar"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel4" type="Panel" parent="GridContainerHotbar"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel5" type="Panel" parent="GridContainerHotbar"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel6" type="Panel" parent="GridContainerHotbar"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="GridContainerInventory" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.0
+offset_top = -48.0
+offset_right = 232.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 6
+
+[node name="Panel7" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel8" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel9" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel10" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel11" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel12" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel13" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel14" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel15" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel16" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel17" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel18" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel19" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel20" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel21" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel22" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel23" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="Panel24" type="Panel" parent="GridContainerInventory"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_bmqga")
+script = ExtResource("3_2038i")
+
+[node name="CraftingButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 295.5
+offset_top = -176.5
+offset_right = 319.5
+offset_bottom = -152.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+texture_normal = ExtResource("5_skfjh")
+texture_pressed = ExtResource("6_ry1wu")
+texture_hover = ExtResource("6_q6kxw")
+
+[node name="CraftingMenu" parent="." instance=ExtResource("8_cl2i6")]
+layout_mode = 0
+offset_left = -260.0
+offset_top = -148.0
+offset_right = -130.0
+offset_bottom = -79.0
+
+[connection signal="pressed" from="CraftingButton" to="." method="_on_crafting_button_pressed"]

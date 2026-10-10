@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdth0skuroa1n"]
+
+[ext_resource type="PackedScene" uid="uid://b316w28m6wclr" path="res://scenes/inventory/inventory_item_display.tscn" id="1_20chd"]
+[ext_resource type="Script" path="res://scripts/ObjectiveHUD.gd" id="1_okav2"]
+
+[node name="ObjectiveHud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_okav2")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(4, 4)
+theme_override_constants/h_separation = 8
+columns = 3
+
+[node name="ItemDisplay" parent="GridContainer" instance=ExtResource("1_20chd")]
+layout_mode = 2
+item_quantity = "80"
+item_name = "Wood"
+
+[node name="ItemDisplay2" parent="GridContainer" instance=ExtResource("1_20chd")]
+layout_mode = 2
+item_quantity = "12"
+item_name = "Stone"
+
+[node name="ItemDisplay3" parent="GridContainer" instance=ExtResource("1_20chd")]
+layout_mode = 2
+item_quantity = "24"
+item_name = "Crystal"

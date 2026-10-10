@@ -1,0 +1,1 @@
+export { escapeIslandModule } from "./module";

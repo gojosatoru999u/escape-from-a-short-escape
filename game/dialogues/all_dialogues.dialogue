@@ -1,0 +1,30 @@
+~ game_start
+The Protagonist: ...
+The Protagonist: Where... Where am I?
+The Protagonist: What is this place? How did I even got here...?
+The Protagonist: I have to find a way to escape.
+=> END
+
+~ no_weapon_beach
+The Protagonist: Hmm... I think it would be wise to bring a weapon before exploring.
+=> END
+
+~ enter_forest
+The Protagonist: Woah...beautiful. Plenty of resources here.
+The Protagonist: If I had a pickaxe, I might be able to mine more of these stones...
+=> END
+
+~ first_enemy_encounter
+The Protagonist: Is that...another person?
+The Protagonist: HELLOOOO! HELP ME!
+=> END
+
+~ found_crystals
+The Protagonist: Are these...crystals?
+The Protagonist: Yeah, I can definitely use these to replace metal for my escape boat! I just have to mine them.
+=> END
+
+~ broken_boat
+The Protagonist: Hmm, looks like someone else has been stranded here before too.
+The Protagonist: If I have the resources, I can repair this boat and use this to escape the island.
+=> END

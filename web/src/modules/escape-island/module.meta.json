@@ -1,0 +1,9 @@
+{
+  "id": "escape-island",
+  "type": "template",
+  "summary": "Escape From A Short Escape: original Godot island survival game.",
+  "provides": ["island survival", "Godot Web runtime"],
+  "tags": ["survival", "godot"],
+  "version": "0.1.0",
+  "author": { "name": "nabilmuafa (original game)" }
+}

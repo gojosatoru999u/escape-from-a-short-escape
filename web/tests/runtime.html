@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><base href="/"><title>Local Godot runtime test</title></head>
+<body style="margin:0"><nav style="position:fixed;z-index:99999;background:white;bottom:0;right:0"><button id="pause">Pause test</button><button id="resume">Resume test</button><button id="destroy">Destroy test</button><output id="state">Loading</output></nav><div id="game" style="height:100vh"></div>
+<script type="module">
+import { escapeIslandModule } from '/src/modules/escape-island/module.ts';
+let scene, agent;
+// Local fixture only: test the real read-only RPC and Godot grant without signing in.
+// This fixture is outside public/ and is never included in the production archive.
+const client={blockchain:{getPlayAccess:async()=>({ok:true,data:{LinkedWallets:[{NetworkID:'solana',Address:'8HA7Agw32MQMNXxmHKRNeHmn26yy38789jFcZZn6NSg5'}]}})}};
+escapeIslandModule.setup({client,registerScene(s){scene=s},registerRoute(){},exposeToAgent(a){agent=a}, every(){}});
+document.querySelector('#pause').onclick=()=>scene.suspend();
+document.querySelector('#resume').onclick=()=>scene.activate();
+document.querySelector('#destroy').onclick=()=>scene.destroy();
+scene.mount({host:document.querySelector('#game')});
+await scene.ready();scene.activate();
+setInterval(()=>{document.querySelector('#state').textContent=JSON.stringify(agent.state());},500);
+</script></body></html>

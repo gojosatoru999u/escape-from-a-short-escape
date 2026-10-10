@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://dylge8dh7gt54"]
+
+[ext_resource type="Script" path="res://scripts/Collectible.gd" id="1_rpi7t"]
+[ext_resource type="Shader" path="res://scripts/Collectible.gdshader" id="2_o52hd"]
+[ext_resource type="Texture2D" uid="uid://ica42hwqpug0" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/StoneItem.png" id="2_rpyjd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_luwgt"]
+shader = ExtResource("2_o52hd")
+shader_parameter/line_thickness = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rbu4a"]
+radius = 18.0
+
+[node name="Stone" type="Node2D"]
+script = ExtResource("1_rpi7t")
+item_name = "Stone"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_luwgt")
+texture = ExtResource("2_rpyjd")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_rbu4a")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

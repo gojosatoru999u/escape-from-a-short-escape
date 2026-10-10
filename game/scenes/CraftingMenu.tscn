@@ -1,0 +1,175 @@
+[gd_scene load_steps=12 format=3 uid="uid://cbtfb3djf54qe"]
+
+[ext_resource type="Texture2D" uid="uid://dgf0qmuek5s3n" path="res://assets/Custom Assets/Crafting_Menu.png" id="1_moal7"]
+[ext_resource type="Texture2D" uid="uid://btk3ej4cukl17" path="res://assets/Ninja Adventure - Asset Pack/Items/Weapons/Pickaxe/Sprite.png" id="2_2vsaw"]
+[ext_resource type="Script" path="res://scripts/CraftingMenu.gd" id="2_45blw"]
+[ext_resource type="Texture2D" uid="uid://1wjucen64fuf" path="res://assets/Custom Assets/Craft_Item_Button.png" id="3_ax0tm"]
+[ext_resource type="Texture2D" uid="uid://da21oaluswjm7" path="res://assets/Custom Assets/Craft_Item_Button_Pressed.png" id="4_5pdxt"]
+[ext_resource type="Texture2D" uid="uid://dvlakvh1lotyg" path="res://assets/Custom Assets/Craft_Item_Button_Hover.png" id="5_dcmyk"]
+[ext_resource type="Texture2D" uid="uid://c2dq54w35277r" path="res://assets/Custom Assets/Craft_Item_Button_Disabled.png" id="6_b14ua"]
+[ext_resource type="FontFile" uid="uid://cwp6uh1c8a8yg" path="res://assets/Fonts/managore-m5x7.ttf" id="7_ulvjo"]
+[ext_resource type="Texture2D" uid="uid://bwh51r2uxp8lc" path="res://assets/Ninja Adventure - Asset Pack/Items/Weapons/Club/Sprite.png" id="8_242ae"]
+[ext_resource type="PackedScene" uid="uid://b316w28m6wclr" path="res://scenes/inventory/inventory_item_display.tscn" id="8_vwea2"]
+[ext_resource type="Texture2D" uid="uid://b3wygvegsdeb3" path="res://assets/Ninja Adventure - Asset Pack/Items/Weapons/Sword2/Sprite.png" id="9_06x2s"]
+
+[node name="CraftingMenu" type="TextureRect"]
+offset_left = -259.0
+offset_top = -140.0
+offset_right = -129.0
+offset_bottom = -71.0
+scale = Vector2(4, 4)
+texture = ExtResource("1_moal7")
+script = ExtResource("2_45blw")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 8.0
+offset_top = -28.0
+offset_right = -8.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 6
+
+[node name="MarginContainer" type="HBoxContainer" parent="GridContainer"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 0
+alignment = 1
+
+[node name="PickaxeImage" type="TextureRect" parent="GridContainer/MarginContainer"]
+custom_minimum_size = Vector2(14, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_2vsaw")
+stretch_mode = 2
+
+[node name="PickaxeCraftButton" type="TextureButton" parent="GridContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+disabled = true
+texture_normal = ExtResource("3_ax0tm")
+texture_pressed = ExtResource("4_5pdxt")
+texture_hover = ExtResource("5_dcmyk")
+texture_disabled = ExtResource("6_b14ua")
+
+[node name="Label" type="Label" parent="GridContainer/MarginContainer/PickaxeCraftButton"]
+layout_mode = 2
+offset_left = 7.25
+offset_top = 1.0
+offset_right = 34.25
+offset_bottom = 14.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("7_ulvjo")
+text = "Craft"
+
+[node name="ItemDisplay" parent="GridContainer/MarginContainer" instance=ExtResource("8_vwea2")]
+layout_mode = 2
+size_flags_vertical = 4
+item_quantity = "3"
+item_name = "Stone"
+
+[node name="ItemDisplay2" parent="GridContainer/MarginContainer" instance=ExtResource("8_vwea2")]
+layout_mode = 2
+item_quantity = "4"
+item_name = "Wood"
+
+[node name="MarginContainer2" type="HBoxContainer" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="ClubImage" type="TextureRect" parent="GridContainer/MarginContainer2"]
+custom_minimum_size = Vector2(14, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("8_242ae")
+stretch_mode = 3
+
+[node name="ClubCraftButton" type="TextureButton" parent="GridContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 4
+disabled = true
+texture_normal = ExtResource("3_ax0tm")
+texture_pressed = ExtResource("4_5pdxt")
+texture_hover = ExtResource("5_dcmyk")
+texture_disabled = ExtResource("6_b14ua")
+
+[node name="Label2" type="Label" parent="GridContainer/MarginContainer2/ClubCraftButton"]
+layout_mode = 2
+offset_left = 7.25
+offset_top = 0.75
+offset_right = 34.25
+offset_bottom = 13.75
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_ulvjo")
+text = "Craft"
+
+[node name="ItemDisplay" parent="GridContainer/MarginContainer2" instance=ExtResource("8_vwea2")]
+layout_mode = 2
+item_quantity = "1"
+item_name = "Stick"
+
+[node name="ItemDisplay2" parent="GridContainer/MarginContainer2" instance=ExtResource("8_vwea2")]
+layout_mode = 2
+item_quantity = "8"
+item_name = "Wood"
+
+[node name="MarginContainer3" type="HBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="SwordImage" type="TextureRect" parent="GridContainer/MarginContainer3"]
+custom_minimum_size = Vector2(14, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("9_06x2s")
+stretch_mode = 3
+
+[node name="SwordCraftButton" type="TextureButton" parent="GridContainer/MarginContainer3"]
+layout_mode = 2
+size_flags_vertical = 4
+disabled = true
+texture_normal = ExtResource("3_ax0tm")
+texture_pressed = ExtResource("4_5pdxt")
+texture_hover = ExtResource("5_dcmyk")
+texture_disabled = ExtResource("6_b14ua")
+
+[node name="Label3" type="Label" parent="GridContainer/MarginContainer3/SwordCraftButton"]
+layout_mode = 2
+offset_left = 7.0
+offset_top = 1.0
+offset_right = 34.0
+offset_bottom = 14.0
+scale = Vector2(0.5, 0.5)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_ulvjo")
+text = "Craft"
+
+[node name="ItemDisplay" parent="GridContainer/MarginContainer3" instance=ExtResource("8_vwea2")]
+layout_mode = 2
+item_quantity = "1"
+item_name = "Stick"
+
+[node name="ItemDisplay2" parent="GridContainer/MarginContainer3" instance=ExtResource("8_vwea2")]
+layout_mode = 2
+item_quantity = "2"
+item_name = "Stone"
+
+[node name="ItemDisplay3" parent="GridContainer/MarginContainer3" instance=ExtResource("8_vwea2")]
+layout_mode = 2
+item_quantity = "4"
+item_name = "Crystal"
+
+[connection signal="pressed" from="GridContainer/MarginContainer/PickaxeCraftButton" to="." method="_on_pickaxe_craft_button_pressed"]
+[connection signal="pressed" from="GridContainer/MarginContainer2/ClubCraftButton" to="." method="_on_club_craft_button_pressed"]
+[connection signal="pressed" from="GridContainer/MarginContainer3/SwordCraftButton" to="." method="_on_sword_craft_button_pressed"]

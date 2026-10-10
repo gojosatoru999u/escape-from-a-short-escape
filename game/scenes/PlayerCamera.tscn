@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dygdec12vvp3f"]
+
+[ext_resource type="Script" path="res://scripts/Camera.gd" id="1_acgkj"]
+[ext_resource type="PackedScene" uid="uid://x853d5351pcr" path="res://scenes/RainOverlay.tscn" id="1_vi2jr"]
+
+[node name="Camera2D" type="Camera2D"]
+zoom = Vector2(2.5, 2.5)
+limit_left = -288
+limit_top = -400
+limit_right = 224
+limit_bottom = 400
+script = ExtResource("1_acgkj")
+
+[node name="Rain" parent="." instance=ExtResource("1_vi2jr")]

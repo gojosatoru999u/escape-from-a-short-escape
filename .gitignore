@@ -1,0 +1,15 @@
+**/.godot/
+**/node_modules/
+**/dist/
+**/.tools/
+**/.env
+**/.env.*
+!**/.env.example
+web/public/game/
+*.zip
+*.log
+*.exe
+*.dll
+*.pdb
+.DS_Store
+Thumbs.db

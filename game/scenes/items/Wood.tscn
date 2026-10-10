@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqq0iaxfjnsry"]
+
+[ext_resource type="Script" path="res://scripts/Collectible.gd" id="1_fk5xu"]
+[ext_resource type="Shader" path="res://scripts/Collectible.gdshader" id="2_hokn0"]
+[ext_resource type="Texture2D" uid="uid://rif8gl864dag" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/WoodItem.png" id="3_ntlxi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8yyyu"]
+shader = ExtResource("2_hokn0")
+shader_parameter/line_thickness = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4alac"]
+radius = 16.0
+
+[node name="Wood" type="Node2D"]
+script = ExtResource("1_fk5xu")
+item_name = "Wood"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_8yyyu")
+texture = ExtResource("3_ntlxi")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_4alac")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,0 +1,19 @@
+Escape From A Short Escape
+Original game by nabilmuafa:
+https://github.com/nabilmuafa/individual-game-jam
+Source commit: 37254b41e542e8f0fe2249e631441b0b0d30e5ac
+The original repository has no top-level license.
+
+Ninja Adventure Asset Pack by Pixel-Boy and AAA (CC0):
+https://pixel-boy.itch.io/ninja-adventure-asset-pack
+Full license: licenses/ninja-adventure-CC0.txt
+
+Character Footsteps (Dirt & Grass) by Nebula Audio:
+https://nebula-audio.itch.io/character-footsteps-rock-grass-pack-1
+
+Dialogue Manager by Nathan Hoad (MIT):
+https://github.com/nathanhoad/godot_dialogue_manager
+Full license: licenses/dialogue-manager-MIT.txt
+
+Additional original assets made using Aseprite.
+This adaptation adds Godot Web export and the iDosGames host with Solana login.

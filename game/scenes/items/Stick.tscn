@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://cucu6moet5f3y"]
+
+[ext_resource type="Script" path="res://scripts/Collectible.gd" id="1_6qsmt"]
+[ext_resource type="Shader" path="res://scripts/Collectible.gdshader" id="2_e76dn"]
+[ext_resource type="Texture2D" uid="uid://bbcotstmmwlhm" path="res://assets/Ninja Adventure - Asset Pack/Items/Weapons/Stick/Custom-Stick.png" id="3_75slh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jci7r"]
+shader = ExtResource("2_e76dn")
+shader_parameter/line_thickness = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2o41s"]
+radius = 16.0
+
+[node name="Stick" type="Node2D"]
+script = ExtResource("1_6qsmt")
+item_name = "Stick"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_jci7r")
+texture = ExtResource("3_75slh")
+region_rect = Rect2(0, 0, 3, 16)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_2o41s")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

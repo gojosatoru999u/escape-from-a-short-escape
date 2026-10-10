@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cuy7i46p1oa1c"
+path="res://.godot/imported/Thunder_Edit.wav-ee259aaf85c3663ec79d17fc85e2b10f.sample"
+
+[deps]
+
+source_file="res://assets/Custom Assets/Thunder_Edit.wav"
+dest_files=["res://.godot/imported/Thunder_Edit.wav-ee259aaf85c3663ec79d17fc85e2b10f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

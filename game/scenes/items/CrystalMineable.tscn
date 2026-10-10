@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://ix1gjtr8knhq"]
+
+[ext_resource type="Script" path="res://scripts/Collectible.gd" id="1_4p67n"]
+[ext_resource type="Texture2D" uid="uid://b77jgy62cbe74" path="res://assets/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Crystals_Mineable.png" id="2_7f51f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lwmm4"]
+radius = 14.1421
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_70vxq"]
+radius = 22.0227
+
+[node name="CrystalMineable" type="StaticBody2D"]
+script = ExtResource("1_4p67n")
+item_name = "Crystal"
+max_take = 4
+need_tools = true
+tool_needed_name = "Pickaxe"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_7f51f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_lwmm4")
+debug_color = Color(0.793522, 0.426058, 0.014307, 0.42)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_70vxq")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

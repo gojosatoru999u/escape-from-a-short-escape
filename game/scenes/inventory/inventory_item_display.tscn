@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://b316w28m6wclr"]
+
+[ext_resource type="Script" path="res://scripts/inventory_item_display.gd" id="2_6jlwc"]
+[ext_resource type="FontFile" uid="uid://cwp6uh1c8a8yg" path="res://assets/Fonts/managore-m5x7.ttf" id="3_pl1yw"]
+
+[node name="ItemDisplay" type="Control"]
+custom_minimum_size = Vector2(12, 16)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_6jlwc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 42.0
+offset_bottom = 43.0
+scale = Vector2(0.25, 0.25)
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 2
+offset_left = 10.25
+offset_top = 9.25
+offset_right = 50.25
+offset_bottom = 22.25
+scale = Vector2(0.4, 0.4)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_pl1yw")
