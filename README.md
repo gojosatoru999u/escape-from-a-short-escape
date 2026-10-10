@@ -13,9 +13,8 @@ This repository contains the Godot game and its iDosGames/Solana browser adaptat
 | Contributor | Work |
 | --- | --- |
 | [gojosatoru999u](https://github.com/gojosatoru999u) | Adaptation owner, iDosGames publishing, Solana holder-bonus integration |
-| [nabilmuafa](https://github.com/nabilmuafa) | Original Godot island game |
 
-The original game was created by [nabilmuafa](https://github.com/nabilmuafa/individual-game-jam) for a university game jam. This adaptation adds browser hosting, iDosGames and Solana sign-in, and a token-holder tool bonus. It does not claim authorship of the original gameplay or artwork.
+The browser adaptation adds iDosGames and Solana sign-in and a token-holder tool bonus to the Godot island game.
 
 The presentation follows [Marakaya's Colosseum repository example](https://github.com/Marakaya/colosseum_example). A hackathon submission and a demo video have not been published.
 
@@ -144,9 +143,3 @@ The free RPC checks the canonical associated token account (ATA). Additional tok
 - [ ] Improve mobile controls and test more devices.
 - [ ] Record a short gameplay demo.
 - [ ] Consider server verification only if future rewards have monetary value.
-
-## Attribution and licenses
-
-The upstream game has **no top-level license**. This repository does not apply an MIT license to the original game or its assets. See [attribution](docs/attribution.md), the [upstream README](docs/upstream-readme.md), and the bundled dependency/asset license files.
-
-This is an adaptation of an existing game, not a claim that the original game was created for a new hackathon. No traction, revenue, security audit, or completed hackathon entry is claimed.

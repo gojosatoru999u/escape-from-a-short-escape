@@ -1,16 +1,5 @@
 # Attribution and licensing
 
-## Original game
-
-**Escape From A Short Escape**, by nabilmuafa:
-https://github.com/nabilmuafa/individual-game-jam
-
-Source revision: `37254b41e542e8f0fe2249e631441b0b0d30e5ac`.
-The original project was a university Individual Game Jam assignment. Its
-original README is retained in `docs/upstream-readme.md` and `game/README.md`.
-The upstream repository does not provide a top-level license; this adaptation
-does not grant a blanket license over that source or original artwork.
-
 ## Adaptation
 
 The adaptation adds Godot Web export, the iDosGames host, Solana signed-challenge

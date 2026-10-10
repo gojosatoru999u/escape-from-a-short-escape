@@ -1,8 +1,4 @@
 Escape From A Short Escape
-Original game by nabilmuafa:
-https://github.com/nabilmuafa/individual-game-jam
-Source commit: 37254b41e542e8f0fe2249e631441b0b0d30e5ac
-The original repository has no top-level license.
 
 Ninja Adventure Asset Pack by Pixel-Boy and AAA (CC0):
 https://pixel-boy.itch.io/ninja-adventure-asset-pack
